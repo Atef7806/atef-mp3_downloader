@@ -1,0 +1,64 @@
+body {
+    font-family: 'Cairo', sans-serif;
+    background-color: #121212;
+    color: white;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.menu-icon {
+    font-size: 26px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    background-color: #007bff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 220px;
+    height: 100%;
+    background: #343a40;
+    color: white;
+    padding-top: 60px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+#sidebar.show {
+    right: 0;
+}
+
+#sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+#sidebar ul li:hover {
+    background-color: #495057;
+}

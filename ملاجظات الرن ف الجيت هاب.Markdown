@@ -1,0 +1,64 @@
+الداتا بيز
+-- حذف كل الصور من جدول الصور
+DELETE FROM product_images;
+
+-- حذف كل المنتجات من جدول المنتجات
+DELETE FROM products;
+
+-- تأكد من تنفيذ الحذف
+SELECT * FROM products;
+SELECT * FROM product_images;
+
+
+# إضافة كل الملفات المعدلة
+git add .
+
+# عمل commit مع رسالة
+git commit -m "تعديل المسارات وتصحيح ملف railway.json"
+
+# رفع التعديلات إلى الفرع الرئيسي على GitHub
+git push origin main
+
+
+لو أضفت أي تعديل جديد (سواء في ملف .html أو .py) لازم تعيد الخطوات:
+--------------
+3. لو أنت بس بتحدث الكود (مش البيانات)
+fly deploy --strategy rolling
+------------------------
+git add .
+git commit -m "Update"
+git push origin main
+python check_products.py
+تشغيل السيرفر بايثون
+python ran.py
+fly deploy
+fly logs -a chicsta
+fly logs -i 3d8d40d7c71248
+Python app.py
+Python ran_final.py
+------------------
+تمام، عشان نشوف اللوجات الفعلية ونعرف إيه اللي بيحصل لما تدخل على رابط المنتج، محتاج تشغل الأمر التالي في ترمينال جهازك:
+
+fly logs -i <machine-id> --app chicsta
+أو لو عايز كل السجلات بدون تحديد جهاز:
+
+fly logs --app chicsta
+
+اوامر الحاويه الدوكير
+
+docker build -t atef-app .
+
+
+docker run -p 5000:5000 atef-app
+--------------------------
+✅ أوامر رفع قاعدة البيانات الجديدة:
+
+
+
+
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/اسم_المستخدم/اسم_المشروع.git
+git push -u origin main
